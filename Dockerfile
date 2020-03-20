@@ -74,6 +74,9 @@ RUN curl -L https://github.com/punkstar/mageconfigsync/releases/download/0.5.0-b
 # install magento code style
 RUN curl -LO https://github.com/pablofmorales/PHP_CodeSniffer/raw/master/bin/phpcs > /usr/local/bin/phpcs && chmod +x /usr/local/bin/phpcs
 
+# install PHP Unit
+RUN curl -LO https://phar.phpunit.de/phpunit-8.phar > /usr/local/bin/phpunit && chmod +x /usr/local/bin/phpunit
+
 # install composer checker
 RUN curl -LO https://get.sensiolabs.org/security-checker.phar > security-checker && chmod a+x security-checker && mv security-checker /usr/local/bin
 
